@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>이미지와 테이블</title>
+    <style>
+        td,
+        th {
+            border: 1px solid;
+            width: 50px;
+            height: 50px
+        }
+    </style>
+</head>
+
+<body>
+    <!-- width나 height중 하나만 바꿔도 
+            비율을 유지한 상태에서 조절된다.-->
+    <img src="img/apple.jpg" alt="사과" width="400">
+    <br>
+    <img src="http://placehold.it/500x250" alt="" width="400">
+
+    <!-- 테이블 -->
+    <table>
+        <caption>표의 제목(캡션)</caption>
+        <thead>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- colspan : 셀을 가로방향으로 병합 -->
+                <td colspan="2">tbody1</td>
+                <!-- rowspan : 셀을 세로방향으로 병합 -->
+                <td rowspan="2">tbody2</td>
+                <td>tbody3</td>
+            </tr>
+            <tr>
+                <td>tbody1</td>
+                <td>tbody2</td>
+                <td>tbody3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>tfoot1</td>
+                <td>tfoot2</td>
+                <td>tfoot3</td>
+                <td>tfoot4</td>
+            </tr>
+        </tfoot>
+    </table>
+    <br>
+    <table>
+        <caption>Specification values</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">Grade.</th>
+                <th rowspan="2">Point.</th>
+                <th colspan="2">Strength.</th>
+                <th rowspan="2">Percent.</th>
+            </tr>
+            <tr>
+                <th>kg/mm</th>
+                <th>lb/in</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hard</td>
+                <td>0.45</td>
+                <td>56.2</td>
+                <td>80,000</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Medium</td>
+                <td>0.45</td>
+                <td>49.2</td>
+                <td>70,000</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Soft</td>
+                <td>0.45</td>
+                <td>42.2</td>
+                <td>60,000</td>
+                <td>30</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <table>
+        <!-- 뒤에 나오는 컬럼(td 태그)에 적용할 스타일을 해당 태그에서 미리 적용할 수 있도록한다.
+             특히 각 컬럼의 길이를 설정하는데 가장 많이 쓰인다.-->
+        <colgroup>
+            <col width="20px" />
+            <col width="100px" />
+            <col width="30px" />
+        </colgroup>
+
+        <thead>
+            <tr>
+                <td>번호</td>
+                <td>제목</td>
+                <td>이름</td>
+            </tr>
+        </thead>
+    </table>
+</body>
+
+</html>
