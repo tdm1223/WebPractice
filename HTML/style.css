@@ -1,0 +1,169 @@
+h2 {
+    color:red;
+}
+
+/* 요소 선택자 (태그) */
+h3,h4,h5{
+    color: yellow; 
+    font-size: 2em; 
+    background-color: gray;
+    
+}
+
+/* CLASS 선택자 */
+.html {
+    color: purple;
+}
+
+.css {
+    text-decoration: underline;
+}
+
+/* ID 선택자 */
+#bar{
+    background-color: yellow;
+}
+
+/* 선택자의 조합 */
+/* 요소와 class의 조합 */
+p.css{
+    border: 2px solid red;
+}
+
+/* 다중 class */
+.html.css {
+    border:1px solid;
+}
+
+/* id와 class의 조합 */
+#bar.html{
+    border:5px solid blue;
+}
+
+/* 단순 속성으로 선택 */
+h6[class] { 
+    color: orange; 
+}
+
+h6[class][id] { 
+    text-decoration: underline; 
+    border:2px solid green;
+}
+
+/* 정확한 속성 값으로 선택 */
+p[class="foo"] 
+{
+    color: silver; 
+}
+
+p[id="title"] 
+{
+    text-decoration: underline; 
+}
+
+/* 부분 속성값으로 선택 */
+/* class 속성의 값이 공백으로 구분한 color 단어가 포함되는 요소 선택 */
+p[class~="color"] 
+{
+    background-color: blue;
+}
+/* class 속성의 값이 color로로 시작하는 요소 선택 */
+p[class^="color"] 
+{
+    font-style: italic; 
+}
+/* class 속성의 값이 color로 끝나는 요소 선택 */
+p[class$="color"] 
+{ 
+    font-size : 5em;
+}
+/* class 속성의 값이 color 문자가 포함되는 요소 선택 */
+p[class*="color"] 
+{
+    color:red; 
+}
+
+/* 자손 선택자 */
+/* div 자손중 span인 태그에 적용 */
+div span{
+    color:brown;
+}
+
+/* 자식 선택자 */
+/* div의 자식중 span에 적용 */
+div > span{
+    color:red;
+}
+
+/* 인접 형제 선택자 */
+div + span{
+    color:blue;
+}
+
+/* 조합해서 사용 */
+/* body 요소의 자식요소인 div요소의 자손 요소인 table요소와 인접한
+ 형제 ul요소를 선택하는 선택자 */
+body > div table + ul{
+    background-color: red;
+}
+
+/* 가상 클래스 */
+/* 문서 구조와 관련된 가상 클래스 */
+/* 첫번째 자식 요소 선택 */
+li:first-child{
+    color:red;
+}
+/* 마지막 자식 요소 선택 */
+li:last-child{
+    color:blue;
+}
+
+/* 링크 관련된 가상 클래스 */
+/* link : 하이퍼링크 이면서 아직 방문하지 않은 앵커 */
+a:link{
+    color:red;
+}
+/* visited : 이미 방문한 하이퍼링크를 의미 */
+a:visited{
+    color:purple;
+}
+
+/* 사용자 동작 관련 가상 클래스 */
+/* focus : 현재 입력 포커스를 갖고 있는 요소에 적용 */
+a:focus{
+    background-color: yellow;
+}
+/* hover : 마우스 포인터가 위치해 있는 요소에 적용 */
+a:hover{
+    font-weight: bold;
+}
+/* active : 사용자 입력에 의해 활성화된 요소에 적용 */
+a:active{
+    color:red;
+}
+
+/* 가상 요소 */
+/* p태그의 앞부분에 추가 */
+p::before{
+    color:green;
+    content:"before 가상 요소를 활용한 내용";
+}
+/* p태그의 뒷부분에 추가 */
+p::after{
+    color:blue;
+    content:"after 가상 요소를 활용한 내용";
+}
+/* p태그의 첫번째 줄은 노란색으로 */
+p::first-line{
+    color:yellow;
+}
+/* p태그의 첫번째 글자는 3배로 */
+p::first-letter{
+    font-size: 3em;
+}
+
+/* 구체성 : 선택자를 얼마나 명시적으로 선언했느냐를 수치화 한 것 
+   구체성의 값이 높을 수록 우선 
+    h1 { color: red; }
+    body h1 { color: green; }
+   */
