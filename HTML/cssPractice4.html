@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>타이포그래피</title>
+    <style>
+        /* 웹폰트 */
+        @font-face {
+            font-family: webNanumGothic;
+            /* 사용자 지정 웹 폰트명 */
+            src: url(NanumGothic.eot);
+            /* 적용 될 웹 폰트의 경로 */
+            font-weight: bold;
+            /* 필요에 따라 지정 */
+            font-style: italic;
+            /* 필요에 따라 지정 */
+        }
+
+        div {
+            /* 글꼴 */
+            font-family: webNanumGothic;
+            /* 줄간격 */
+            line-height: 2;
+            /* 글꼴의 크기 미지정시 16px(1em)*/
+            font-size: 20px;
+
+            /* 글꼴 스타일 */
+            font-style: italic;
+
+            /* font-variant : 글꼴의 형태 변형 
+                기본 : normal
+                small-caps : 소문자를 작은 대문자로 */
+            font-variant: small-caps;
+
+            /* 텍스트 정렬 */
+            text-align: center;
+
+            /* 텍스트 들여쓰기 */
+            /* text-indent: 1em; */
+            /* text-indent: 30%; */
+            text-indent: 30px;
+
+            /* 텍스트 장식 */
+            text-decoration: underline overline;
+        
+            /* 단어 관련 속성 */
+            /* 공백 */
+            white-space: nowrap; /* 공백 무시 */
+
+            /* 자간 (음수 가능)*/
+            letter-spacing: 3px;
+            
+            /* 단어 간격 */
+            word-spacing: 2px;
+
+            /* 단어가 라인 끝에 나올 경우 어떻게 처리할지 */
+            word-break: break-all;
+
+            /* 요소를 벗어난 단어의 줄바꿈을 지정 */
+            word-wrap: break-word;
+        }
+
+        div.vertical{
+            vertical-align: 50px;
+        }
+        /* 글꼴 굵기 normal : 400, bold : 700 */
+        .w400 {
+            font-weight: 400;
+        }
+
+        .w700 {
+            font-weight: 700;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <span class="w700">FONT</span><br>
+        <span class="w400">FONT</span><br>
+        <span>font</span><br>
+        <span>font</span><br>
+    </div>
+    <hr>
+</body>
+
+</html>
