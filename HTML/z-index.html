@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>z-index</title>
+    <style>
+        .parent {
+            z-index: 10;
+            position: relative;
+            width: 300px;
+            height: 50px;
+            border: 2px solid blue;
+            background-color: #ccc;
+            color:black;
+        }
+
+        .child {
+            z-index: 10;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border: 2px solid red;
+            color:black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- zindex
+        1. position 값이 static이 아닌 경우 지정 가능
+        2. 순서 값이 없을 경우 생성순서에 따라 쌓임
+        3. 부모가 z-index 값이 있을 경우 부모 안에서만 의미 있음
+        4. 큰 값이 가장 위쪽. 음수 사용 가능
+    -->
+    <div class="wrap">
+        <h1 class="practive_title">z-index 속성</h1>
+        <div class="z_area">
+            <div class="parent" style="z-index:11">
+                position: relative;
+                <div class="child" style="right:20px;z-index:1000;">
+                    position: absolute;
+                </div>
+            </div>
+            <div class="parent">
+                position: relative;
+                <div class="child">
+                    position: absolute;
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

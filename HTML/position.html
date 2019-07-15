@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>position</title>
+    <style>
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        .sibling {
+            padding: 5px;
+            background-color: grey;
+            text-align: center;
+            color: black;
+        }
+
+        .parent {
+            border: 1px dashed #aaa;
+            padding: 10px;
+        }
+
+        .child,
+        .child_offset {
+            width: 60px;
+            height: 60px;
+            padding: 20px;
+            background-color: #dc3636;
+            text-align: center;
+            color: yellow;
+            font-weight: bold;
+            border: 1px solid #333;
+        }
+
+        .child_offset {
+            background-color: #3677dc;
+        }
+
+        .static {
+            position: static;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .static {
+            position: static;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .fixed {
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>position <i>(Offset 미지정)</i></h1>
+    <h2>static (기본)</h2>
+    <div class="parent">
+        <div class="sibling">Sibling 1</div>
+        <div class="child static">position static</div>
+        <div class="sibling">Sibling 2</div>
+    </div>
+
+    <h2>relative</h2>
+    <div class="parent">
+        <div class="sibling">Sibling 1</div>
+        <div class="child relative">position relative</div>
+        <div class="sibling">Sibling 2</div>
+    </div>
+
+    <h2>absolute</h2>
+    <div class="parent">
+        <div class="sibling">Sibling 1</div>
+        <!-- absolute, fixed는 inline요소일때 display:block으로 변경시킴. inline-block 값을 임의 지정했을 때는 그 값을 유지함. -->
+        <span class="child absolute">position absolute</span>
+        <div class="sibling">Sibling 2</div>
+    </div>
+
+    <h2 t>fixed</h2>
+    <div class="parent">
+        <div class="sibling">Sibling 1</div>
+        <!-- 현재 fixed는 offset값이 없어 뷰포트 밖으로 밀려나오면서 화면 아래로 사라짐 -->
+        <div class="child fixed">fixed</div>
+        <div class="sibling">Sibling 2</div>
+    </div>
+
+
+    <h1>position <i>(Offset 지정)</i></h1>
+    <h2>static</h2>
+    <div class="parent">
+        <div class="sibling">Sibling 1</div>
+        <!-- static은 offset 영향 받지 않음 
+              선언한 값은 들어간다. -->
+        <div class="child_offset static" style="top: 40px; right: 40px;">offset static <br>top: 40, left: 40</div>
+        <div class="sibling">Sibling 2</div>
+    </div>
+
+    <h2>relative</h2>
+    <div class="parent">
+        <div class="sibling">Sibling 1</div>
+        <!-- 상대적으로 40,40만큼 이동한 위치 -->
+        <div class="child_offset relative" style="top: 40px; left: 40px;">offset relative <br>top: 40, left: 40</div>
+        <div class="sibling">Sibling 2</div>
+    </div>
+
+    <h2>absolute - parent relative</h2>
+    <div class="parent relative">
+        <div class="sibling">Sibling 1</div>
+        <div class="child_offset absolute" style="top: 40px; left: 80px;">offset absolute<br>top: 40, left: 80</div>
+        <div class="sibling">Sibling 2</div>
+    </div>
+
+    <h2>fixed</h2>
+    <!-- 부모가 fixed여도 별개로 위치함
+           브라우저의 좌표값을 기준으로 위치함 -->
+    <div class="parent">
+        <div class="sibling">Sibling 1</div>
+        <div class="child_offset fixed" style="top:100px;left:80%;">offset fixed<br>top:100, left:80%</div>
+        <div class="sibling">Sibling 2</div>
+    </div>
+</body>
+
+</html>
