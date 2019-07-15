@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Media Queries</title>
+    <style>
+        /*  참고 사이트
+            - https://www.w3.org/TR/css3-mediaqueries/
+            - https://www.w3.org/TR/mediaqueries-4/
+            - https://mediaqueri.es/ 
+        */
+
+        /* 1. display 크기에 따른 body 태그의 background-color 변경*/
+        /* 0 ~ 767px */
+        @media screen and (min-width:0px) and (max-width: 767px) {
+            body {
+                background-color: gold;
+            }
+        }
+        /* 768px ~ 1024px */
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            body {
+                background-color: red;
+            }
+        }
+        /* 1025px ~ */
+        @media screen and (min-width: 1025px) {
+            body {
+                background-color: lightpink;
+            }
+        }
+        
+        /* 2. 페이지 인쇄하는 경우의 스타일 추가 */
+        @media print {
+            /* 앵커 요소의 및줄 제거 */
+            a {
+                text-decoration: none;
+            }
+            /* 앵커 요소의 url 출력 */
+            a:after {
+                display: inline;
+                content: '('attr(href) ')';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p>W3C는 <a href="https://www.w3.org/TR/css3-mediaqueries/">CSS3 미디어쿼리 문서</a>를 2012년 6월에 표준 권고안으로 제정하였습니다.</p>
+    <p>또한, 기존의 미디어쿼리 개선 작업을 진행 중이며, 2017년 9월에 <a href="https://www.w3.org/TR/mediaqueries-4/">미디어쿼리 레벨4</a>를 발표했습니다. 이
+        문서는 현재 유력 표준 권고안입니다.</p>
+</body>
+
+</html>
