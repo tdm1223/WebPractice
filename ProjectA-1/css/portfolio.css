@@ -1,0 +1,153 @@
+body,
+h2,
+h3,
+h4,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+/* header start*/
+.header {
+    background-color: #000;
+    width: 100%;
+}
+
+.headerTitle {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 1000px;
+    height: 120px;
+}
+
+.headerTitle > h1 {
+    position: absolute;
+    margin: auto 0;
+    top: 0;
+    bottom: 0;
+    height: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+}
+/* header end */
+
+/* content start */
+.content {
+    margin: 0 auto;
+    padding: 40px;
+    width: 1000px;
+}
+
+/* nav */
+.nav {
+    margin-bottom: 40px;
+    width: 100%;
+}
+.nav > ul {
+    width: 100%;
+    list-style: none;
+}
+.nav > ul::before {
+    content: '';
+    display: inline-block;
+    height: 33px;
+}
+.navItem {
+    position: relative;
+    float: left;
+    border: solid #d1d1d1 1px;
+    margin-right: 14px;
+    width: 322px;
+    height: 33px;
+    text-align: center;
+    font-size: 16px;
+}
+.navItem:last-child {
+    margin-right: 0;
+}
+.navItem:hover {
+    border-color: #454545;
+    font-weight: bold;
+}
+.navItem > a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 16px;
+    margin: auto;
+    color: #000;
+    text-decoration: none;
+}
+/* nav end */
+
+/* section start */
+.mainSection {
+    border-bottom: solid #454545 1px;
+}
+.mainSectionTitle {
+    padding-bottom: 30px;
+}
+.mainSectionTitle > h2 {
+    height: 20px;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+.section {
+    margin-top: 30px;
+}
+.sectionTitle {
+    position: relative;
+    padding-left: 15px;
+    border: solid #d1d1d1 1px;
+    height: 46px;
+    background-color: #f7f7f7;
+}
+.sectionTitle > h3 {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    height: 16px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+.sectionContent {
+    border: solid #d1d1d1 1px;
+    border-top: none;
+    padding: 30px;
+}
+.sectionContent > p{
+    color: #000;
+    font-size: 12px;
+}
+/* section end */
+/* content end */
+
+/* footer start*/
+.footer {
+    border-top: solid #d1d1d1 1px;
+    padding: 30px 0;
+    text-align: center;
+}
+.address{
+    color: #999;
+    font-size: 12px;
+}
+.copyright {
+    margin-top:1em;
+    color: #000;
+    font-size: 12px;
+}
+/* footer end */
